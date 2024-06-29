@@ -10,3 +10,6 @@ if ! grep -q '. ~/.bashconfrc' "$HOME"/.bashrc; then
     cp "$SOURCE_DIR"/.bashconfrc  $HOME/
     echo -e "\nif [ -f ~/.bashconfrc ]; then\n    . ~/.bashconfrc\nfi" >> "$BASHRC_FILE"
 fi
+
+
+source $HOME/.bashrc
