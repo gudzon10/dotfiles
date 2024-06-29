@@ -1,3 +1,5 @@
 #!/usr/bin/bash
 
-cat $(pwd)/.bash_logout >> $HOME/.bash_logout
+BASEDIR=$(dirname $0)
+#-cat $(pwd)/.bash_logout >> $HOME/.bash_logout
+cat "$BASEDIR"/.bash_logout 
