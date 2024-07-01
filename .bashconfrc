@@ -78,6 +78,7 @@ if [ -z "$PROMPT_COMMAND" ]
 then
     PROMPT_COMMAND="history -a"
 else
+    # TODO: при каждом source ~/.bashrc добавляет history. Исправить.
     PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
 fi
 
