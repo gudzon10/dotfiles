@@ -4,7 +4,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && flatpak upda
 
 
 sudo apt install -y \
-    git vim xclip \
+    git vim xclip htop \
     ca-certificates curl \
 
 
