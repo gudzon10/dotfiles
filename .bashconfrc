@@ -1,14 +1,15 @@
 # PS1 bash prompt config
-# OLD: PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 RED="\[\e[31m\]"
 GREEN="\[\e[32m\]"
 GREENBOLD="\[\e[1;32m\]"
 BLUE="\[\e[34m\]"
 BLUEBOLD="\[\e[1;34m\]"
 ENDCOLOR="\[\e[0m\]"
+
+NEW_LINE_SYMBOL=" "
+# NEW_LINE_SYMBOL="->"
 PROMPT_START="${GREENBOLD}\u@\h${ENDCOLOR}:${BLUEBOLD}\w${ENDCOLOR}"
-PROMPT_END=" $\n${BLUEBOLD} ${ENDCOLOR} "
-# PS1="${GREENBOLD}\u@\h${ENDCOLOR}:${BLUEBOLD}\w${ENDCOLOR}$\n "
+PROMPT_END=" $\n${BLUEBOLD}${NEW_LINE_SYMBOL}${ENDCOLOR} "
 PS1="${PROMPT_START}${PROMPT_END}"
 
 # bash-git-prompt https://github.com/magicmonty/bash-git-prompt.git
