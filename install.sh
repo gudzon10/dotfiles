@@ -18,8 +18,8 @@ fi
 #!/bin/bash
 
 if [ ! -f /var/log/system-update.log ]; then
-    touch /var/log/system-update.log
-    chown "$USER":"$USER" /var/log/system-update.log
+    sudo touch /var/log/system-update.log
+    sudo chown "$USER":"$USER" /var/log/system-update.log
 fi
 sudo cp "$SOURCE_DIR"/fullupgrade /usr/local/bin/fullupgrade
 
