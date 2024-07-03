@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+# TODO слать на почту?
+
+# Путь к файлу журнала
+LOG_FILE="/var/log/system-update.log"
+
+(sudo apt-get update && \
+sudo apt-get upgrade -y && \
+sudo apt-get autoremove -y && \
+flatpak update -y) >> $LOG_FILE 2>&1
