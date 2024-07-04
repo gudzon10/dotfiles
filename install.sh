@@ -17,19 +17,19 @@ fi
 ## Обновления по крону.
 #!/bin/bash
 
-if [ ! -f /var/log/system-update.log ]; then
-    sudo touch /var/log/system-update.log
-    sudo chown "$USER":"$USER" /var/log/system-update.log
-fi
-sudo cp "$SOURCE_DIR"/fullupgrade /usr/local/bin/fullupgrade
+# if [ ! -f /var/log/system-update.log ]; then
+#     sudo touch /var/log/system-update.log
+#     sudo chown "$USER":"$USER" /var/log/system-update.log
+# fi
+# sudo cp "$SOURCE_DIR"/fullupgrade /usr/local/bin/fullupgrade
 
-# Получаем содержимое задачи
-CRON_TASK="0 * * * * /usr/local/bin/fullupgrade"
-# Проверяем, есть ли уже задача в cron-таблице
-if ! crontab -l | grep -q "/usr/local/bin/fullupgrade"; then
-  # Если нет, добавляем задачу
-  (crontab -l; echo "$CRON_TASK") | crontab -
-fi
+# # Получаем содержимое задачи
+# CRON_TASK="0 * * * * /usr/local/bin/fullupgrade"
+# # Проверяем, есть ли уже задача в cron-таблице
+# if ! crontab -l | grep -q "/usr/local/bin/fullupgrade"; then
+#   # Если нет, добавляем задачу
+#   (crontab -l; echo "$CRON_TASK") | crontab -
+# fi
 
 
 echo "Please, reload .bashrc manually:  source $HOME/.bashrc"
